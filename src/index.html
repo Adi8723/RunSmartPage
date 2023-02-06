@@ -6,14 +6,16 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>RunSmart</title>
+
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
     <link rel="stylesheet" href="css/fonts.css">
+    <link rel="stylesheet" type="text/css" href="css/slick.css" />
     <link rel="stylesheet" href="css/style.min.css">
 </head>
 
 <body>
-    <div class="promo">
+    <section class="promo">
         <div class="container">
             <header class="header">
                 <div class="header__logo">
@@ -57,9 +59,9 @@
 
 
         </div>
-    </div>
+    </section>
 
-    <div class="advantages">
+    <section class="advantages">
         <div class="container">
             <h2 class="title">НАШИ ПРЕИМУЩЕСТВА</h2>
             <div class="advantages__wrapper">
@@ -82,16 +84,60 @@
                     <div class="advantages__subtitle">Учим бегать</div>
                     <div class="advantages__text">Помогаем с обучением
                         правильной технике бега!
-                        Дружим с крупнейшей школой бега в России - <a href="">I LOVE RUNNING.</a> 
+                        Дружим с крупнейшей школой бега в России - <a href="">I LOVE RUNNING.</a>
                     </div>
                 </div>
             </div>
         </div>
-    </div>
+    </section>
 
+    <section class="consultation">
+        <div class="container">
+            <h2 class="title title__left">Получите бесплатную консультацию <br>
+                по подбору пульсометра
+            </h2>
+            <div class="consultation__descr">Просто заполните форму заявки <br>
+                и мы перезвоним вам в течении 10 минут
+            </div>
+            <form action="#" method="post" class="feed-form">
+                <input name="name" required type="text" class="mt35" placeholder="Ваше имя">
+                <input name="phone" required type="text" placeholder="Ваш телефон">
+                <input name="email" required type="email" placeholder="Ваш E-mail">
+                <button class="button button_consultation">заказать кОНСУЛЬТАЦИЮ</button>
+            </form>
+        </div>
+    </section>
+
+    <section class="corousel">
+
+       <div class="container">
+        <div class="corousel__inner">
+            <div>
+                <img src="img/1.png" alt="slide">
+            </div>
+            <div>
+                <img src="img/2.png" alt="slide1">
+            </div>
+            <div>
+                <img src="img/watch.png" alt="slide3">
+            </div>
+        </div>
+       </div>
+
+    </section>
+    
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"
-        integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN"
-        crossorigin="anonymous"></script>
+    integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN"
+    crossorigin="anonymous"></script>
+    
+    
+    <script type="text/javascript" src="//code.jquery.com/jquery-1.11.0.min.js"></script>
+    <script type="text/javascript" src="//code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
+    
+    <script type="text/javascript" src="js/slick.min.js"></script>
+    
+    <script src="js/script.js"></script>
+
 </body>
 
 </html>

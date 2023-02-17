@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ru">
 
 <head>
     <meta charset="UTF-8">
@@ -10,12 +10,13 @@
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
     <link rel="stylesheet" href="css/fonts.css">
-    <link rel="stylesheet" type="text/css" href="css/slick.css" />
+    <link rel="stylesheet" href="css/slick.css">
+    <link rel="stylesheet" href="css/animate.css">
     <link rel="stylesheet" href="css/style.min.css">
 </head>
 
 <body>
-    <section class="promo">
+    <section class="promo" id="up">
         <div class="container">
             <header class="header">
                 <div class="header__logo">
@@ -66,21 +67,21 @@
             <h2 class="title">НАШИ ПРЕИМУЩЕСТВА</h2>
             <div class="advantages__wrapper">
                 <div class="advantages__item">
-                    <img src="icons/cup.png" alt="" class="advantages__icons">
+                    <img src="icons/cup.png" alt="" class="advantages__icons advantages__icons_animat">
                     <div class="advantages__subtitle">Делимся опытом</div>
                     <div class="advantages__text">Наши сотрудники всегда готовы поделиться своим опытом,
                         так как сами бегают полумарафоны, переплыли Босфор, готовятся к соревнованиям по триатлону!
                     </div>
                 </div>
                 <div class="advantages__item">
-                    <img src="icons/heart.png" alt="" class="advantages__icons">
+                    <img src="icons/heart.png" alt="" class="advantages__icons advantages__icons_animated">
                     <div class="advantages__subtitle">Заботимся о здоровье</div>
                     <div class="advantages__text">Мы работаем для того,
                         чтобы Ваши занятия спортом шли на пользу Вашему здоровью и были в радость Вам и Вашим близким!
                     </div>
                 </div>
                 <div class="advantages__item">
-                    <img src="Icons/shoe.png" alt="" class="advantages__icons">
+                    <img src="Icons/shoe.png" alt="" class="advantages__icons advantages__icons_animate">
                     <div class="advantages__subtitle">Учим бегать</div>
                     <div class="advantages__text">Помогаем с обучением
                         правильной технике бега!
@@ -101,14 +102,14 @@
             </div>
             <form id="consultation-form" action="#" method="post" class="feed-form">
                 <input name="name" minlength="3" type="text" class="mt35" placeholder="Ваше имя">
-                <input name="phone" type="text" placeholder="Ваш телефон">
+                <input name="phone" placeholder="Ваш телефон">
                 <input name="email" type="email" placeholder="Ваш E-mail">
                 <button class="button button_consultation">заказать кОНСУЛЬТАЦИЮ</button>
             </form>
         </div>
     </section>
 
-    <section class="corousel">
+    <div class="corousel">
         <div class="container">
             <div class="corousel__inner">
                 <div>
@@ -122,7 +123,7 @@
                 </div>
             </div>
         </div>
-    </section>
+    </div>
 
     <section class="catalog">
         <div class="container">
@@ -150,19 +151,21 @@
                             </div>
                             <a href="#" class="catalog-item__link">ПОДРОБНЕЕ</a>
                         </div>
-                        <ul class="catalog-item__list ">
-                            <li>Вы услышите звуковое оповещение о нужном пульсе во время тренировки;
-                            </li>
-                            <li>
-                                Вы увидите информативный графический индикатор целевых тренировочных зон пульса;
-                            </li>
-                            <li>
-                                Также Вы увидите информацию о расходе калорий за тренировку;</li>
-                            <li>
-                                Вы сможете посмотреть данные по 10 тренировкам.
-                            </li>
+                        <div class="catalog-item__list ">
+                            <ul>
+                                <li>Вы услышите звуковое оповещение о нужном пульсе во время тренировки;
+                                </li>
+                                <li>
+                                    Вы увидите информативный графический индикатор целевых тренировочных зон пульса;
+                                </li>
+                                <li>
+                                    Также Вы увидите информацию о расходе калорий за тренировку;</li>
+                                <li>
+                                    Вы сможете посмотреть данные по 10 тренировкам.
+                                </li>
+                            </ul>
                             <a href="#" class="catalog-item__back">назад</a>
-                        </ul>
+                        </div>
                     </div>
                     <hr>
 
@@ -454,7 +457,8 @@
     <section class="review">
         <div class="container">
             <h2 class="title">отзывы клиентов</h2>
-            <div class="review__item">
+            <div class="review__item animate__animated animate__fadeInUp wow" data-wow-duration="2s"
+                data-wow-delay="1s">
                 <img src="img/person2.png" alt="" class="review__img">
                 <div class="review__text">
                     <div class="subtitle">Ирина Иванченко
@@ -475,7 +479,8 @@
 
             </div>
             <hr>
-            <div class="review__item">
+            <div class="review__item animate__animated animate__fadeInUp wow" data-wow-duration="2s"
+                data-wow-delay="1s">
                 <img src="img/person1.png" alt="" class="review__img">
                 <div class="review__text">
                     <div class="subtitle">Иван Сёмочкин</div>
@@ -493,7 +498,8 @@
                 </div>
             </div>
             <hr>
-            <div class="review__item">
+            <div class="review__item animate__animated animate__fadeInUp wow" data-wow-duration="2s"
+                data-wow-delay="1s">
                 <img src="img/person.png" alt="" class="review__img">
                 <div class="review__text">
                     <div class="subtitle">Юлия Дашкина</div>
@@ -545,7 +551,7 @@
             <div class="mod__descr">и мы перезвоним вам в течении 10 минут</div>
             <form action="#" method="post" class="feed-form feed-form_mt25">
                 <input name="name" type="text" class="mt35" placeholder="Ваше имя">
-                <input name="phone" type="text" placeholder="Ваш телефон">
+                <input name="phone" placeholder="Ваш телефон">
                 <input name="email" type="email" placeholder="Ваш E-mail">
                 <button class="button button_consultation">заказать кОНСУЛЬТАЦИЮ</button>
             </form>
@@ -557,7 +563,7 @@
             <div class="mod__descr">Пульсометр Polar FT1</div>
             <form action="#" method="post" class="feed-form feed-form_mt25">
                 <input name="name" type="text" class="mt35" placeholder="Ваше имя">
-                <input name="phone" type="text" placeholder="Ваш телефон">
+                <input name="phone" placeholder="Ваш телефон">
                 <input name="email" type="email" placeholder="Ваш E-mail">
                 <button class="button button_consultation">Купить</button>
             </form>
@@ -573,10 +579,16 @@
         </div>
     </div>
 
-    <script type="text/javascript" src="https://code.jquery.com/jquery-1.11.0.min.js"></script>
-    <script type="text/javascript" src="https://code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
+    <a href="#up" class="pageup">
+        <img src="icons/up.svg" alt="up">
+    </a>
+
+    <script src="https://code.jquery.com/jquery-1.11.0.min.js"></script>
+    <script src="https://code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
     <script src="js/slick.min.js"></script>
     <script src="js/jquery.validate.min.js"></script>
+    <script src="js/jquery.maskedinput.min.js"></script>
+    <script src="js/wow.js"></script>
     <script src="js/script.js"></script>
 
 

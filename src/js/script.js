@@ -43,8 +43,6 @@ $(document).ready(function () {
     $('.overlay, #consultation, #thanks, #order').fadeOut('slow');
   });
 
-
-
   $('.button_mini').each(function (i) {
     $(this).on('click', function () {
       $('#order .mod__descr').text($('.catalog-item__subtitle').eq(i).text());
@@ -52,28 +50,29 @@ $(document).ready(function () {
     })
   })
 
-
-  function vallidateForms(form){
+  function vallidateForms(form) {
     $(form).validate({
       rules: {
         name: {
           required: true,
           minlength: 3,
         },
-        phone: "required",
+        
         email: {
           required: true,
           email: true
         },
         messages: {
-          name:{
+          name: {
             required: "Please specify your name",
             minlength: jQuery.validator.format("At least {0} characters required!")
           },
+          phone: "Please type your Number",
           email: {
             required: "We need your email address to contact you",
             email: "Your email address must be in the format of name@domain.com"
           }
+
         }
       }
     })
@@ -83,4 +82,42 @@ $(document).ready(function () {
   vallidateForms('#consultation form')
   vallidateForms('#order form')
 
+  $('input[name=phone]').mask('+49 (999) 999-99-99');
+
+  $('form').submit(function (e) {
+    e.preventDefault();
+
+    if(!$(this).valid()){
+      return;
+    }
+
+    $.ajax({
+      type: 'POST',
+      url: 'mailer/smart.php',
+      data: $(this).serialize()
+    }).done(function(){
+      $(this).find('input').val('')
+
+      $('#consultation, #order').fadeOut();
+      $('.overlay, #thanks').fadeIn(slow);
+
+
+      $('form'.trigger('reset'))
+    })
+    return false;
+  })
+
+
+
+  //Smooth
+
+  $(window).scroll(function(){
+    if($(this).scrollTop() > 1600){
+      $('.pageup').fadeIn();
+    }else{
+      $('.pageup').fadeOut();
+    }
+  })
+
+  new WOW().init();
 });

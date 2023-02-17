@@ -3,12 +3,13 @@
     padding: 70px 0 95px 0;
 
 
-    &__wrapper{
+    &__wrapper {
         margin-top: 65px;
         display: flex;
         justify-content: space-between;
     }
-    &__item{
+
+    &__item {
         display: flex;
         flex-direction: column;
         align-items: center;
@@ -28,9 +29,31 @@
         font-size: 14px;
         font-weight: 300;
         text-align: center;
+
         a {
             color: #ff0000;
             text-decoration: underline;
+        }
+    }
+
+    &__icons {
+        &_animated {
+            animation: heartbeats 2s ease infinite;
+            &:hover{
+                animation-play-state: paused;
+            }
+        }
+        &_animate {
+            animation: shuhe 2.5s ease infinite alternate;
+            &:hover{
+                animation-play-state: paused;
+            }
+        }
+        &_animat {
+            animation: cup 2.5s ease infinite alternate;
+            &:hover{
+                animation-play-state: paused;
+            }
         }
     }
 }

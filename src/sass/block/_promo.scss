@@ -55,3 +55,43 @@
         }
     }
 }
+
+
+
+
+@media (max-width: 767px) {
+	.promo {
+		
+		&__wrapper {
+			display: flex;
+			justify-content: space-between;
+			align-items: center;
+		}
+
+	}
+
+
+}
+
+@media (max-width: 575px) {
+	.promo{
+        padding: 21px;
+        .header {
+            flex-direction: column;
+		}
+		&__header {
+			font-size: 30px;
+		}
+		&__subheader{
+			font-size: 20px;
+		}
+        &__icons {
+            width: 350px;
+        }
+    
+        &__icon {
+            width: 106px;
+            text-align: center;
+        }
+	}
+}

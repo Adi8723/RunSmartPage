@@ -22,3 +22,21 @@
    
    
 }
+
+@media (max-width: 991px){
+	.consultation{
+		padding: 60px 30px;
+		&__descr {	
+			font-size: 18px;
+			margin-top: 40px;
+			text-align: left;
+		}
+	}
+}
+
+@media (max-width: 575px) {
+	.consultation{
+		margin: auto;
+    
+	}
+}

@@ -31,44 +31,35 @@
         font-weight: 700;
     }
 
-    &__contacts{
+    &__contacts {
         display: flex;
         flex-direction: column;
-        align-items:flex-end;
+        align-items: flex-end;
     }
 }
+
 
 @media (max-width: 1200px) {
-    
+    .header {
+        font-size: 32px;
+    }
 }
 
-@media (max-width: 991px){
-   .container{
-        width: 700px;
-    &__header{
-        display: flex;
-        flex-wrap: wrap;
-    }
-    &__logo {
-        width: 150px;
-        img {
-            width: 100%;
+
+@media (max-width: 767px) {
+    .header {
+        justify-content: space-evenly;
+        &__official {
+            display: none;
         }
     }
+}
 
-    &__official {
-        
-    }
-
-    &__phone {
-        
-    }
-
-    &__contacts{
-        display: flex;
+@media (max-width: 575px) {
+    .header {
         flex-direction: column;
-        align-items:flex-start;
+        &__contacts{
+            margin-top: 20px;
+        }
     }
-   }
-
 }

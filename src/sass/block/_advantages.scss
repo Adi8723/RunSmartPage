@@ -21,6 +21,7 @@
         font-size: 18px;
         font-weight: 700;
         margin-top: 38px;
+        text-align: center;
     }
 
     &__text {
@@ -37,6 +38,7 @@
     }
 
     &__icons {
+        background-color: #000;
         &_animated {
             animation: heartbeats 2s ease infinite;
             &:hover{
@@ -56,4 +58,19 @@
             }
         }
     }
+}
+
+@media (max-width: 991px) {
+	.advantages{
+		&__wrapper {
+			margin-top: 65px;
+			display: flex;
+			justify-content: center;
+			flex-wrap: wrap;
+		}
+		&__item {
+			max-width: 408px;
+			margin-top: 15px;
+		}
+	}
 }

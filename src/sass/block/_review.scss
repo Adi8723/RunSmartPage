@@ -42,3 +42,21 @@
         background-color: #f6f6f6;
     }
 }
+
+@media (max-width: 767px) {
+	.review {
+		&__item {
+			flex-direction: column;
+			text-align: center;
+		}
+
+		&__img {
+			margin: 20px auto;
+		}
+
+		&__subtitle {
+			
+		}
+		
+	}
+}
